@@ -6,9 +6,6 @@
       font-family: verdana;
     }
   </style>
-  <script>
-    document.getElementById('teslaBox1').innerText = parseFloat(document.getElementById('gaussBox1').innerText);
-  </script>
   <h1>Magnetic Unit Converter</h1>
   <h2>Gauss/Tesla</h2>
     <label for="gauss1">Gauss:</label>
@@ -17,4 +14,11 @@
     <input type="text" id="teslaBox1" name="tesla1"><br><br>
   <br>
   <div>1 Tesla = 10^4 Gauss</div>
+  <script>
+    // Convert from Gauss to Tesla
+    //function gaussToTesla1(){}
+    document.getElementById('teslaBox1').value = parseFloat(document.getElementById('gaussBox1').value) / Math.pow(10,4);
+    // Convert from Tesla to Gauss
+    //document.getElementById('gaussBox1').value = parseFloat(document.getElementById('teslaBox1').value) * Math.pow(10,4);
+  </script>
 </html>
